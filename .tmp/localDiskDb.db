@@ -56,6 +56,45 @@
         "experience": "30",
         "id": 7,
         "number": "+380956342584"
+      },
+      {
+        "firstName": "Вайдич",
+        "middleName": "Оксана",
+        "lastName": "Володимирівна",
+        "birthdate": "1985-03-14T22:00:00.000Z",
+        "position": "Уролог",
+        "photo": "/images/doctors/5.jpg",
+        "workingDays": "вт-сб",
+        "experience": "15",
+        "createdAt": "2017-05-21T18:23:18.270Z",
+        "updatedAt": "2017-05-21T18:23:18.270Z",
+        "id": 8
+      },
+      {
+        "firstName": "Вовканич",
+        "middleName": "Володимир",
+        "lastName": "Іванович",
+        "birthdate": "1978-11-02T22:00:00.000Z",
+        "position": "Гінеколог",
+        "photo": "/images/doctors/4.jpg",
+        "workingDays": "пн, ср, сб",
+        "experience": "19",
+        "createdAt": "2017-05-21T18:26:04.655Z",
+        "updatedAt": "2017-05-21T18:26:04.655Z",
+        "id": 9
+      },
+      {
+        "firstName": "Гройсман",
+        "middleName": "Бенедикт",
+        "lastName": "Антонович",
+        "birthdate": "1983-01-17T22:00:00.000Z",
+        "position": "Гінеколог",
+        "photo": "/images/doctors/10.jpg",
+        "workingDays": "пн-чт",
+        "experience": "14",
+        "createdAt": "2017-05-21T18:27:55.685Z",
+        "updatedAt": "2017-05-21T18:27:55.685Z",
+        "id": 10
       }
     ]
   },
@@ -123,7 +162,7 @@
   },
   "counters": {
     "employee": {
-      "id": 7
+      "id": 10
     }
   }
 }

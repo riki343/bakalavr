@@ -2,6 +2,7 @@ angular.module('bakalavr').controller('EmployeeController', ['$http', function (
   var self = this;
 
   this.list = [];
+  this.autocomplete = '';
 
   function getEmployee() {
     var promise = $http.get('/employee/list');
