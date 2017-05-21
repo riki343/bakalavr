@@ -1,0 +1,25 @@
+{
+  "name": "bakalavr",
+  "description": "a Sails application",
+  "main": "app.js",
+  "authors": [
+    "riki34"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "ngmap": "^1.18.4",
+    "font-awesome": "^4.7.0",
+    "wow": "wowjs#^1.1.2"
+  }
+}

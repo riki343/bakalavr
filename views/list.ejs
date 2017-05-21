@@ -1,0 +1,32 @@
+<div ng-controller="EmployeeController as ctrl">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2 class="text-warning" style="margin-bottom: 25px;">Список лікарів</h2>
+
+      <ul class="list-unstyled" ng-cloak>
+        <li style="margin-bottom: 8px;">
+          <div class="row">
+            <div class="col-xs-2 text-info"><b>Фото</b></div>
+            <div class="col-xs-4 text-info"><b>П.І.Б.</b></div>
+            <div class="col-xs-2 text-info"><b>Посада</b></div>
+            <div class="col-xs-2 text-info"><b>Робочі дні</b></div>
+          </div>
+        </li>
+        <li ng-repeat="item in ctrl.list" style="margin-bottom: 15px;">
+          <div class="row">
+            <div class="col-xs-2">
+              <img ng-src="{{item.photo}}" alt="{{item.photo}}" class="img img-responsive">
+            </div>
+            <div class="col-xs-4">
+              <a ng-href="{{'/employee/single/' + item.id}}">
+                <b>{{ item.firstName + ' ' + item.middleName + ' ' + item.lastName }}</b>
+              </a>
+            </div>
+            <div class="col-xs-2">{{ item.position }}</div>
+            <div class="col-xs-2">{{ item.workingDays }}</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
