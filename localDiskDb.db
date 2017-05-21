@@ -1,0 +1,129 @@
+{
+  "data": {
+    "employee": [
+      {
+        "firstName": "Романюк",
+        "middleName": "Іван",
+        "lastName": "Богданович",
+        "birthdate": "1985-05-14T21:00:00.000Z",
+        "position": "Невролог",
+        "createdAt": "2017-05-06T11:22:00.922Z",
+        "updatedAt": "2017-05-06T11:22:00.922Z",
+        "photo": "/images/doctors/6.jpg",
+        "workingDays": "пн-пт",
+        "experience": "15",
+        "id": 4,
+        "number": "+380956342584"
+      },
+      {
+        "firstName": "Візантій",
+        "middleName": "Ігор",
+        "lastName": "Сергійович",
+        "birthdate": "1968-03-03T22:00:00.000Z",
+        "position": "Окуліст",
+        "createdAt": "2017-05-06T11:23:16.096Z",
+        "updatedAt": "2017-05-06T11:23:16.096Z",
+        "photo": "/images/doctors/7.jpg",
+        "workingDays": "пн, чт, сб, нд",
+        "experience": "22",
+        "id": 5,
+        "number": "+380956342584"
+      },
+      {
+        "firstName": "Іванов",
+        "middleName": "Бенедикт",
+        "lastName": "Валентинович",
+        "birthdate": "1977-09-24T22:00:00.000Z",
+        "position": "Травматолог",
+        "createdAt": "2017-05-06T11:42:18.780Z",
+        "updatedAt": "2017-05-06T11:42:18.780Z",
+        "photo": "/images/doctors/8.jpg",
+        "workingDays": "пн-пт",
+        "experience": "10",
+        "id": 6,
+        "number": "+380956342584"
+      },
+      {
+        "firstName": "Кримець",
+        "middleName": "Анна",
+        "lastName": "Миколаївна",
+        "birthdate": "1977-09-24T22:00:00.000Z",
+        "position": "Кардіолог",
+        "createdAt": "2017-05-06T11:42:18.780Z",
+        "updatedAt": "2017-05-06T11:42:18.780Z",
+        "photo": "/images/doctors/9.jpg",
+        "workingDays": "ср-пт",
+        "experience": "30",
+        "id": 7,
+        "number": "+380956342584"
+      }
+    ]
+  },
+  "schema": {
+    "employee": {
+      "firstName": {
+        "type": "string",
+        "size": 255
+      },
+      "middleName": {
+        "type": "string",
+        "size": 255
+      },
+      "lastName": {
+        "type": "string",
+        "size": 255
+      },
+      "photo": {
+        "type": "string",
+        "size": 255
+      },
+      "birthdate": {
+        "type": "date"
+      },
+      "workingDays": {
+        "type": "string",
+        "size": 512
+      },
+      "experience": {
+        "type": "string"
+      },
+      "number": {
+        "type": "string",
+        "size": 50
+      },
+      "position": {
+        "type": "string",
+        "enum": [
+          "Невролог",
+          "Педіатр",
+          "Фізіотерапевт",
+          "Хірург",
+          "Травматолог",
+          "Уролог",
+          "Гінеколог",
+          "Дерматолог",
+          "Окуліст",
+          "Педіатр",
+          "Кардіолог"
+        ]
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "employee": {
+      "id": 7
+    }
+  }
+}
