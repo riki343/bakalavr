@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div style="margin: 25px 0;">
+            <a href="/admin/departments/list">Назад</a>
+        </div>
+
+
+        <h2 class="text-warning" style="margin-bottom: 25px;">Список лікарів відділення</h2>
+
+        <div style="margin: 25px 0;">
+            <a href="/admin/departments/add-user/<%= department %>">Додати лікаря</a>
+        </div>
+
+        <ul>
+            <% for(var i=0; i < list.length; i++) {%>
+            <li>
+                <a href="/employee/single/<%= list[i].id %>">
+                    <%= list[i].firstName + ' ' + list[i].middleName + ' ' + list[i].lastName %>
+                </a>
+                <span>[<a href="/admin/departments/detach/<%= list[i].id %>">видалити з відділу</a>]</span>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+</div>

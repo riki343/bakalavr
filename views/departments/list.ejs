@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-xs-12">
+        <h2 class="text-warning" style="margin-bottom: 25px;">Список відділень</h2>
+
+        <ul>
+            <% for(var i=0; i < list.length; i++) {%>
+                <li><a href="/departments/single/<%= list[i].id %>"><%= list[i].name %></a></li>
+            <% } %>
+        </ul>
+    </div>
+</div>

@@ -1,5 +1,31 @@
 {
   "data": {
+    "department": [
+      {
+        "name": "Шось нове",
+        "createdAt": "2017-06-13T11:29:29.253Z",
+        "updatedAt": "2017-06-13T11:29:29.253Z",
+        "id": 2
+      },
+      {
+        "name": "Якийсь новий відділ",
+        "createdAt": "2017-06-13T11:31:51.700Z",
+        "updatedAt": "2017-06-13T11:31:51.700Z",
+        "id": 3
+      },
+      {
+        "name": "шось вообще нове",
+        "createdAt": "2017-06-13T11:46:12.660Z",
+        "updatedAt": "2017-06-13T11:46:12.660Z",
+        "id": 4
+      },
+      {
+        "name": "dawodkaw;ld",
+        "createdAt": "2017-06-13T12:11:24.474Z",
+        "updatedAt": "2017-06-13T12:11:24.474Z",
+        "id": 5
+      }
+    ],
     "employee": [
       {
         "firstName": "Романюк",
@@ -13,48 +39,6 @@
         "workingDays": "пн-пт",
         "experience": "15",
         "id": 4,
-        "number": "+380956342584"
-      },
-      {
-        "firstName": "Візантій",
-        "middleName": "Ігор",
-        "lastName": "Сергійович",
-        "birthdate": "1968-03-03T22:00:00.000Z",
-        "position": "Окуліст",
-        "createdAt": "2017-05-06T11:23:16.096Z",
-        "updatedAt": "2017-05-06T11:23:16.096Z",
-        "photo": "/images/doctors/7.jpg",
-        "workingDays": "пн, чт, сб, нд",
-        "experience": "22",
-        "id": 5,
-        "number": "+380956342584"
-      },
-      {
-        "firstName": "Йосипович",
-        "middleName": "Алла",
-        "lastName": "Олександрівна",
-        "birthdate": "1977-09-24T22:00:00.000Z",
-        "position": "Травматолог",
-        "createdAt": "2017-05-06T11:42:18.780Z",
-        "updatedAt": "2017-05-06T11:42:18.780Z",
-        "photo": "/images/doctors/8.jpg",
-        "workingDays": "пн-пт",
-        "experience": "10",
-        "id": 6,
-        "number": "+380956342584"
-      },
-      {
-        "firstName": "Кримець",
-        "middleName": "Анна",
-        "lastName": "Миколаївна",
-        "birthdate": "1977-09-24T22:00:00.000Z",
-        "position": "Кардіолог",
-        "createdAt": "2017-05-06T11:42:18.780Z",
-        "updatedAt": "2017-05-06T11:42:18.780Z",
-        "photo": "/images/doctors/9.jpg",
-        "workingDays": "ср-пт",
-        "experience": "30",
-        "id": 7,
         "number": "+380956342584"
       },
       {
@@ -93,12 +77,60 @@
         "workingDays": "пн-чт",
         "experience": "14",
         "createdAt": "2017-05-21T18:27:55.685Z",
-        "updatedAt": "2017-05-21T18:27:55.685Z",
+        "updatedAt": "2017-06-13T12:07:27.375Z",
+        "department": 2,
         "id": 10
+      },
+      {
+        "firstName": "Новак",
+        "middleName": "Анатолій",
+        "lastName": "Богданович",
+        "birthdate": "2017-06-08T00:00:00.000Z",
+        "workingDays": "пн-вт",
+        "expirience": "15",
+        "number": "+38066123456789",
+        "position": "Псіх",
+        "createdAt": "2017-06-13T12:03:52.505Z",
+        "updatedAt": "2017-06-13T12:03:52.580Z",
+        "id": 12,
+        "photo": "/images/12/H1-2VIaMbReverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg"
+      },
+      {
+        "firstName": "dawdawd",
+        "middleName": "dawdawd",
+        "lastName": "dwdawd",
+        "birthdate": "2017-06-16T00:00:00.000Z",
+        "workingDays": "dawdwd",
+        "expirience": "15",
+        "number": "dawk;dmaw;ldma;wd",
+        "position": "dwadadawd",
+        "department": 5,
+        "createdAt": "2017-06-13T12:10:53.131Z",
+        "updatedAt": "2017-06-13T12:11:32.595Z",
+        "id": 13,
+        "photo": "/images/13/r1S8IL6GWR2TUb0R.jpg"
       }
     ]
   },
   "schema": {
+    "department": {
+      "name": {
+        "type": "string",
+        "size": 255
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
     "employee": {
       "firstName": {
         "type": "string",
@@ -131,20 +163,13 @@
         "size": 50
       },
       "position": {
-        "type": "string",
-        "enum": [
-          "Невролог",
-          "Педіатр",
-          "Фізіотерапевт",
-          "Хірург",
-          "Травматолог",
-          "Уролог",
-          "Гінеколог",
-          "Дерматолог",
-          "Окуліст",
-          "Педіатр",
-          "Кардіолог"
-        ]
+        "type": "string"
+      },
+      "department": {
+        "type": "integer",
+        "model": "department",
+        "foreignKey": true,
+        "alias": "department"
       },
       "id": {
         "type": "integer",
@@ -162,7 +187,10 @@
   },
   "counters": {
     "employee": {
-      "id": 10
+      "id": 13
+    },
+    "department": {
+      "id": 5
     }
   }
 }

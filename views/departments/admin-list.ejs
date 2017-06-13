@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div style="margin: 25px 0;">
+            <a href="/admin">Назад</a>
+        </div>
+
+
+        <h2 class="text-warning" style="margin-bottom: 25px;">Список відділень</h2>
+
+
+        <div style="margin: 20px 0;">
+            <a class="btn btn-primary" href="/admin/departments/new">
+                <i class="glyphicon glyphicon-plus"></i>
+                <span>Додати відділення</span>
+            </a>
+        </div>
+
+        <ul>
+            <% for(var i=0; i < list.length; i++) {%>
+            <li>
+                <a href="/admin/departments/single/<%= list[i].id %>"><%= list[i].name %></a>
+                <span>[<a href="/admin/departments/remove/<%= list[i].id%>">видалити</a>]</span>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+</div>

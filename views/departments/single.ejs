@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-xs-12">
+        <h2 class="text-warning" style="margin-bottom: 25px;">Список лікарів відділу</h2>
+
+        <ul>
+            <% for(var i=0; i < list.length; i++) {%>
+            <li>
+                <a href="/employee/single/<%= list[i].id %>">
+                    <%= list[i].firstName + ' ' + list[i].middleName + ' ' + list[i].lastName %>
+                </a>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+</div>

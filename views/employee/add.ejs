@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+        <div style="margin: 25px 0;">
+            <a href="/admin/employee/list">Назад</a>
+        </div>
+
+        <h2 class="text-warning" style="margin-bottom: 25px;">Додати лікаря</h2>
+
+        <form class="form-horizontal" enctype="multipart/form-data" method="post" action="/employee/add">
+            <div class="form-group">
+                <label class="control-label">Прізвище</label>
+                <input type="text" class="form-control" name="firstName" placeholder="Прізвище" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Ім'я</label>
+                <input type="text" class="form-control" name="middleName" placeholder="Ім'я" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">По батькові</label>
+                <input type="text" class="form-control" name="lastName" placeholder="По батькові" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Дата народження</label>
+                <input type="date" class="form-control" name="birthdate">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Робочі дні</label>
+                <input type="text" class="form-control" name="workingDays" placeholder="пн-пт">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Стаж роботи</label>
+                <input type="number" class="form-control" name="expirience" placeholder="5">
+                <span>р.</span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Номер телефону</label>
+                <input type="tel" class="form-control" name="number" placeholder="+380...">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Посада</label>
+                <input type="text" class="form-control" name="position" placeholder="Дерматолог">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Фото</label>
+                <input type="file" class="form-control" name="photo">
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Додати</button>
+            </div>
+        </form>
+
+    </div>
+</div>
